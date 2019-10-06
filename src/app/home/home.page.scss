@@ -1,0 +1,88 @@
+
+
+*{
+    font-family: monospace;
+}
+
+.botones{
+    display: flex;
+}
+
+.operaciones{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+}
+
+.numeros{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.botonesNumeros{
+    height: 19.2vh;
+    font-size: 30px;
+    margin: 0;
+    --background: rgba(34, 36, 40, 0);
+    --box-shadow:none;
+    --border-radius:none;
+}
+
+.botonesOperaciones{
+    height: 15.4vh;
+    margin: 0;
+    --box-shadow:none;
+    --border-radius:none;
+}
+
+.multi, .cancelar{
+    font-size: 18px;
+}
+
+.div,  .mas{
+    font-size: 30px;
+}
+
+.menos{
+    font-size: 40px;
+}
+
+.punto, .igual, .botonesOperaciones{
+    --background: rgba(255, 255, 255, 0.068);
+}
+
+.pantalla{
+    height: 15.5vh;
+}
+
+.tax, .invertir{
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 5px;
+    height: 7vh;
+}
+
+.pantallaSalida{
+    display: inline-block;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.pantallaTAX{
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+
+ion-checkbox{
+    --background-checked:#313336;
+    --checkmark-color:white;
+    margin: 0;
+    padding: 0;
+}
+

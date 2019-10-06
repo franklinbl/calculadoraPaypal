@@ -1,0 +1,72 @@
+<ion-content class="contenedor" color="dark">
+
+  <div class="pantalla">
+    <!-- SECCION PARA MOSTRAR INFORMACION -->
+
+    <ion-item color="dark" class="patallaEntrada">
+      <!-- PANTALLA MOSTRAR LA ENTRADA DE DATOS -->
+      <ion-label mode="ios">
+        <h2>{{pantalaEentrada}}</h2>
+      </ion-label>
+      <h2>{{valor}}</h2>
+    </ion-item>
+
+    <div class="pantallaEnLinea">
+
+      <ion-item color="dark" class="pantallaTAX">
+        <!-- PANTALLA PARA LA SALIDA DE LOS IMPUESTOS PAYPAL -->
+        <ion-label mode="ios">
+          <p>{{pantallaTax}}</p>
+        </ion-label>
+        <p>{{tax}}</p>
+      </ion-item>
+
+      <ion-item color="dark" class="pantallaSalida">
+        <!-- PANTALLA PARA LA SALIDA DE RESULTADOS TOTAL PAYPAL -->
+        <ion-label mode="ios">
+          <p>{{pantallaSalida}}</p>
+        </ion-label>
+        <p>{{resultadoPaypal}}</p>
+      </ion-item>
+
+    </div>
+
+  </div>
+
+  <div class="botonesEnLinea">
+    <!-- PANEL PARA ACTIVAR PAYPAL -->
+
+    <ion-item color="dark" class="tax">
+      <!-- CHECKBOX PARA ACTIVAR FUNCION PAYPAL -->
+      <ion-label mode="ios">
+        <p>TAX de Paypal</p>
+      </ion-label>
+      <ion-checkbox [(ngModel)]="calcOPaypal" (ionChange)="activarCalcPAypal()" mode="ios" color="medium">
+      </ion-checkbox>
+    </ion-item>
+
+    <ion-item color="dark" class="invertir" *ngIf="calcOPaypal==true">
+      <!-- CHECKBOX PARA CAMBIAR CALCULO DE PAYPAL -->
+      <ion-label mode="ios">
+        <p>Invertir calculo</p>
+      </ion-label>
+      <ion-checkbox [(ngModel)]="invertirCalc" (ionChange)="invertirCalculo()" mode="ios" color="medium"></ion-checkbox>
+    </ion-item>
+
+  </div>
+
+  <div class="botones">
+    <!-- PANEL DE BOTONES PARA INTRODUCIR DATOS -->
+
+    <div class="numeros" *ngFor="let grupoNum of grupoDeNumeros">
+      <ion-button *ngFor="let num of grupoNum" (click)="clickNumero(num.title)" [class]="num.class">{{num.title}}</ion-button>
+    </div>
+
+    <div class="operaciones">
+      <ion-button *ngFor="let ope of grupoDeOperaciones" (click)="clickNumero(ope.title)" [class]="ope.class">{{ope.title}}
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

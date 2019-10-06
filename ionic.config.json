@@ -1,0 +1,7 @@
+{
+  "name": "calculadoraPaypal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
